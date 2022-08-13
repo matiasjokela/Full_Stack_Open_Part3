@@ -21,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/matiasjokela/Full_Stack_Open_Part3/issues"
   },
-  "homepage": "https://github.com/matiasjokela/Full_Stack_Open_Part3#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
