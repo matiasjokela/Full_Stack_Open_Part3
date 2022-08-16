@@ -19,7 +19,6 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms :b
 app.use(cors())
 app.use(express.static('build'))
 
-
 app.get('/api/persons/', (req, res, next) => {
 	Person.find({}).then(people => {
 		res.json(people)
