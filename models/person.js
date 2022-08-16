@@ -10,8 +10,22 @@ mongoose.connect(url).then(res => {
 })
 
 const personSchema = new mongoose.Schema({
-	name: String,
-	number: String
+	name: {
+		type: String,
+		minlength: 3,
+		required: true
+	},
+	number: {
+		type: String,
+		minlength: 8,
+		validate: {
+			validator: (v) => {
+				console.log('value', v)
+				return /^\d{2,3}-\d{5,}$/.test(v)
+			},
+		},
+		required: true
+	}
 })
 
 personSchema.set('toJSON', {
